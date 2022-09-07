@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Population</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<canvas id="myChart"></canvas>
+
+<script>
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['California', 'Texas', 'Florida', 'New York', 'Pennsylvania', 'Illinois', 'Ohio', 'Georgia', 'North Carolina', 'Michigan'],
+      datasets: [{
+        label: 'Total population by State in 2020',
+        data: [39538223, 29145505, 21538187, 20201249, 13002700, 12812508, 11799448, 10711908, 10439388, 10077331],
+        backgroundColor: [
+          'rgba(50,74,255,0.2)',
+          'rgba(134,87,0,0.2)',
+          'rgba(0,255,7,0.2)',
+          'rgba(150,63,0,0.2)',
+          'rgba(167,255,2,0.2)',
+          'rgba(255,0,131,0.2)',
+          'rgb(133,126,150, 0.2)',
+          'rgb(12,32,100, 0.2)',
+          'rgb(160,118,21, 0.2)',
+          'rgba(17,160,95,0.2)'
+        ],
+        borderColor: [
+          'rgba(50,74,255,1)',
+          'rgba(134,87,0,1)',
+          'rgba(0,255,7,1)',
+          'rgba(150,63,0,1)',
+          'rgba(167,255,2,1)',
+          'rgba(255,0,131,1)',
+          'rgb(133,126,150, 1)',
+          'rgb(12,32,100, 1)',
+          'rgb(160,118,21, 1)',
+          'rgba(17,160,95,1)'
+        ],
+        borderWidth: 5
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    }
+  });
+</script>
+</body>
+</html>
